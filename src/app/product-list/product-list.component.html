@@ -1,0 +1,25 @@
+<h2>Products</h2>
+
+<div *ngFor="let boutiqueproduct of boutiqueproducts">
+  <h3>
+    <a [title]="boutiqueproduct.name + ' details'">
+      {{ boutiqueproduct.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="boutiqueproduct.description">
+    Description: {{ boutiqueproduct.description }}
+  </p>
+
+  <p *ngIf="!boutiqueproduct.description">
+    No description for this boutiqueproduct
+  </p>
+
+  <button type="button" (click)="share()">Share</button>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
